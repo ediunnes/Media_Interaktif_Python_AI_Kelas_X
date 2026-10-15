@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Python untuk AI — Media Pembelajaran Interaktif</title>
+<style>
+:root{--navy:#14213d;--blue:#2563eb;--cyan:#06b6d4;--purple:#7c3aed;--green:#15803d;--gold:#f59e0b;--ink:#172033;--muted:#64748b;--paper:#f4f7fb;--line:#dbe4f0;--white:#fff}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,Segoe UI,Arial,sans-serif;background:var(--paper);color:var(--ink);line-height:1.55}
+.hero{background:linear-gradient(120deg,#14213d,#1d4ed8 65%,#06b6d4);color:white;padding:32px 20px 28px}
+.wrap{max-width:1050px;margin:auto}.eyebrow{text-transform:uppercase;letter-spacing:.13em;font-size:.75rem;font-weight:800;opacity:.85}
+h1{font-size:clamp(1.8rem,4vw,3rem);line-height:1.1;margin:.5rem 0}.hero p{max-width:750px;margin:.6rem 0 1rem;color:#e6f5ff}
+.meta{display:flex;gap:8px;flex-wrap:wrap}.pill{border:1px solid #ffffff55;background:#ffffff16;border-radius:99px;padding:5px 11px;font-size:.85rem}
+nav{display:flex;gap:8px;flex-wrap:wrap;margin:18px auto;padding:0 20px;max-width:1050px}
+nav button,.btn{border:0;border-radius:10px;padding:10px 14px;font-weight:750;cursor:pointer;background:#e4eaf5;color:var(--navy);transition:.15s}
+nav button.active, .btn.primary{background:var(--blue);color:white}button:hover{filter:brightness(.96);transform:translateY(-1px)}
+main{max-width:1050px;margin:0 auto;padding:0 20px 36px}.panel{display:none}.panel.active{display:block}
+.card{background:var(--white);border:1px solid var(--line);border-radius:18px;padding:20px;margin:0 0 16px;box-shadow:0 5px 18px #17203308}
+h2{margin:.1rem 0 .6rem;font-size:1.4rem;color:var(--navy)}h3{margin:.1rem 0 .5rem;color:var(--navy)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.concept{border-radius:14px;padding:16px;border:1px solid var(--line);background:#fbfdff}.concept .symbol{font-size:1.7rem}.concept p{margin:.35rem 0}
+code,pre{font-family:Consolas,Monaco,monospace}pre{background:#101827;color:#d9f99d;padding:16px;border-radius:12px;overflow:auto;white-space:pre-wrap}
+.inline-code{background:#eaf0ff;color:#1d4ed8;padding:2px 5px;border-radius:5px}
+.note{background:#eff6ff;border-left:4px solid var(--blue);padding:12px 14px;border-radius:8px;margin:12px 0}
+label{display:block;font-weight:700;margin:10px 0 5px}input,select,textarea{width:100%;padding:10px 12px;border:1px solid #cbd5e1;border-radius:9px;font:inherit;background:white;color:var(--ink)}
+textarea{min-height:80px;resize:vertical}.row{display:grid;grid-template-columns:1fr 1fr;gap:12px}.output{background:#0b1220;color:#a7f3d0;border-radius:10px;padding:14px;min-height:48px;font-family:Consolas,monospace;white-space:pre-wrap}
+.question{padding:14px 0;border-bottom:1px solid var(--line)}.question:last-child{border:0}.option{display:flex;align-items:flex-start;gap:9px;font-weight:500;margin:7px 0}.option input{width:auto;margin-top:5px}
+.feedback{margin-top:10px;font-weight:750}.good{color:var(--green)}.bad{color:#b91c1c}.muted{color:var(--muted)}.progress{height:8px;background:#e2e8f0;border-radius:9px;overflow:hidden;margin:12px 0}.progress span{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--blue),var(--cyan))}
+footer{text-align:center;color:var(--muted);padding:18px;font-size:.9rem}
+@media(max-width:600px){.row{grid-template-columns:1fr}.hero{padding-top:25px}nav{padding:0 12px}main{padding:0 12px 25px}.card{padding:16px}}
+</style>
+</head>
+<body>
+<header class="hero"><div class="wrap">
+<div class="eyebrow">Informatika • Kelas X SMK • 30 menit</div>
+<h1>Dasar Pemrograman Python untuk Kecerdasan Artifisial</h1>
+<p>Kenali variabel, percabangan <b>if–else</b>, dan fungsi. Pelajari konsepnya, coba simulasi kode, lalu uji pemahamanmu!</p>
+<div class="meta"><span class="pill">Memahami</span><span class="pill">Mengaplikasi</span><span class="pill">Merefleksi</span><span class="pill">Belajar kolaboratif</span></div>
+</div></header>
+<nav aria-label="Navigasi materi">
+<button class="active" data-tab="belajar">1. Pahami konsep</button><button data-tab="praktik">2. Praktik kode</button><button data-tab="kuis">3. Kuis cepat</button><button data-tab="refleksi">4. Refleksi</button>
+</nav>
+<main>
+<section id="belajar" class="panel active">
+<div class="card"><h2>Tujuan pembelajaran</h2><ul><li>Menjelaskan variabel, struktur kontrol, dan fungsi.</li><li>Menulis kode sederhana menggunakan variabel dan percabangan.</li><li>Membuat fungsi sederhana untuk menjalankan tugas tertentu.</li></ul><div class="note"><b>Pertanyaan pemantik:</b> Bagaimana komputer bisa memilih tindakan yang berbeda berdasarkan umur atau nilai yang kita masukkan?</div></div>
+<div class="grid">
+<div class="concept"><div class="symbol">📦</div><h3>Variabel</h3><p>Tempat menyimpan data agar bisa digunakan kembali.</p><pre>nama = "Ayu"
+umur = 16
+print(nama, umur)</pre><small>Contoh output: <b>Ayu 16</b></small></div>
+<div class="concept"><div class="symbol">🔀</div><h3>Struktur kontrol</h3><p><code class="inline-code">if–else</code> memilih tindakan sesuai kondisi.</p><pre>if umur >= 18:
+    print("Dewasa")
+else:
+    print("Belum dewasa")</pre><small>Indentasi menentukan blok kode.</small></div>
+<div class="concept"><div class="symbol">🧩</div><h3>Fungsi</h3><p>Kumpulan perintah bernama yang dapat dipanggil kembali.</p><pre>def sapa(nama):
+    return "Halo, " + nama
+
+print(sapa("Ayu"))</pre><small>Contoh output: <b>Halo, Ayu</b></small></div>
+</div>
+<div class="card"><h2>Mengapa Python untuk AI?</h2><p>Python memiliki sintaks yang relatif mudah dibaca dan banyak pustaka untuk analisis data, machine learning, deep learning, computer vision, serta pemrosesan bahasa. Pada pembelajaran ini, kita berlatih fondasi pemrogramannya terlebih dahulu.</p><button class="btn primary" onclick="go('praktik')">Mulai praktik →</button></div>
+</section>
+<section id="praktik" class="panel">
+<div class="card"><h2>Laboratorium kode mini</h2><p>Ubah nama dan umur, lalu jalankan simulasi. Ini adalah simulasi di halaman ini; untuk menjalankan Python sungguhan, gunakan <a href="https://colab.google" target="_blank" rel="noopener">Google Colab</a>.</p>
+<div class="row"><div><label for="nama">Nama</label><input id="nama" value="Ayu" maxlength="30"></div><div><label for="umur">Umur</label><input id="umur" type="number" min="0" max="120" value="16"></div></div>
+<div class="card" style="background:#f8fafc;box-shadow:none"><h3>1. Variabel</h3><pre>nama = "..." 
+umur = ...
+print("Halo,", nama, "umur kamu", umur, "tahun")</pre><button class="btn primary" onclick="runVars()">Jalankan variabel</button><div id="outVars" class="output" aria-live="polite">Output akan tampil di sini.</div></div>
+<div class="card" style="background:#f8fafc;box-shadow:none"><h3>2. Struktur kontrol if–else</h3><pre>if umur >= 18:
+    print("Kamu sudah dewasa.")
+else:
+    print("Kamu belum dewasa.")</pre><button class="btn primary" onclick="runIf()">Jalankan percabangan</button><div id="outIf" class="output" aria-live="polite">Output akan tampil di sini.</div></div>
+<div class="card" style="background:#f8fafc;box-shadow:none"><h3>3. Fungsi</h3><pre>def sapa(nama):
+    return "Selamat belajar Python, " + nama + "!"
+
+print(sapa(nama))</pre><button class="btn primary" onclick="runFn()">Jalankan fungsi</button><div id="outFn" class="output" aria-live="polite">Output akan tampil di sini.</div></div>
+<div class="note"><b>Tantangan kelompok:</b> Ubah batas kondisi dari 18 menjadi 17. Prediksi output untuk umur 17 sebelum menekan tombol. Diskusikan alasan hasilnya dengan teman.</div>
+</div>
+<div class="card"><h3>Langkah menggunakan Google Colab</h3><ol><li>Buka <a href="https://colab.google" target="_blank" rel="noopener">colab.google</a> dan buat notebook baru.</li><li>Salin kode dari tiap contoh ke sel kode terpisah.</li><li>Tekan tombol ▶ pada sel untuk menjalankan kode.</li><li>Jika muncul error, periksa tanda kutip, titik dua, dan indentasi.</li><li>Simpan notebook dengan nama <b>Latihan_Python_NamaKelompok</b> di Google Drive.</li></ol></div>
+</section>
+<section id="kuis" class="panel">
+<div class="card"><h2>Kuis cepat: 4 soal</h2><p>Pilih satu jawaban untuk setiap pertanyaan, lalu tekan <b>Periksa jawaban</b>.</p>
+<form id="quizForm">
+<div class="question"><b>1. Apa kegunaan variabel dalam Python?</b>
+<label class="option"><input type="radio" name="q1" value="a"> Menghias tampilan program</label><label class="option"><input type="radio" name="q1" value="b"> Menyimpan data atau nilai</label><label class="option"><input type="radio" name="q1" value="c"> Menghapus semua kode</label><div id="f1" class="feedback"></div></div>
+<div class="question"><b>2. Struktur apa yang digunakan untuk memilih tindakan berdasarkan kondisi?</b>
+<label class="option"><input type="radio" name="q2" value="a"> if–else</label><label class="option"><input type="radio" name="q2" value="b"> print–input</label><label class="option"><input type="radio" name="q2" value="c"> save–open</label><div id="f2" class="feedback"></div></div>
+<div class="question"><b>3. Apa fungsi kata kunci <code>def</code>?</b>
+<label class="option"><input type="radio" name="q3" value="a"> Menampilkan teks</label><label class="option"><input type="radio" name="q3" value="b"> Membuat variabel angka</label><label class="option"><input type="radio" name="q3" value="c"> Mendefinisikan fungsi</label><div id="f3" class="feedback"></div></div>
+<div class="question"><b>4. Jika <code>umur = 16</code> dan kondisinya <code>umur &gt;= 18</code>, cabang mana yang dijalankan?</b>
+<label class="option"><input type="radio" name="q4" value="a"> Cabang if</label><label class="option"><input type="radio" name="q4" value="b"> Cabang else</label><label class="option"><input type="radio" name="q4" value="c"> Keduanya selalu berjalan</label><div id="f4" class="feedback"></div></div>
+<button class="btn primary" type="button" onclick="checkQuiz()">Periksa jawaban</button> <button class="btn" type="reset" onclick="resetQuiz()">Ulangi kuis</button>
+</form><div class="progress"><span id="progressBar"></span></div><h3 id="score" aria-live="polite">Skor: belum diperiksa</h3></div>
+</section>
+<section id="refleksi" class="panel">
+<div class="card"><h2>Merefleksi pembelajaran</h2><p>Diskusikan dalam kelompok, lalu tulis jawaban singkat.</p>
+<label for="r1">1. Mengapa Python banyak digunakan dalam AI?</label><textarea id="r1" placeholder="Tuliskan jawabanmu..."></textarea>
+<label for="r2">2. Apa perbedaan variabel dan fungsi?</label><textarea id="r2" placeholder="Tuliskan jawabanmu..."></textarea>
+<label for="r3">3. Bagaimana struktur kontrol membantu komputer mengambil keputusan?</label><textarea id="r3" placeholder="Tuliskan jawabanmu..."></textarea>
+<label for="r4">4. Berikan satu contoh penggunaan Python yang relevan dengan jurusanmu.</label><textarea id="r4" placeholder="Misalnya: otomotif, busana, kuliner, atau elektronika..."></textarea>
+<button class="btn primary" onclick="saveReflection()">Simpan ringkasan refleksi</button> <button class="btn" onclick="copyReflection()">Salin jawaban</button>
+<p class="muted">Jawaban tersimpan sementara pada halaman ini sampai halaman ditutup atau dimuat ulang.</p><div id="reflectionStatus" class="feedback" aria-live="polite"></div>
+</div>
+<div class="card"><h2>Checklist keberhasilan</h2><label class="option"><input type="checkbox"> Saya dapat menjelaskan variabel.</label><label class="option"><input type="checkbox"> Saya memahami percabangan if–else.</label><label class="option"><input type="checkbox"> Saya dapat menjelaskan fungsi sederhana.</label><label class="option"><input type="checkbox"> Saya berkontribusi dalam kerja kelompok.</label><div class="note">Tugas akhir: simpan notebook Google Colab di Google Drive dan tunjukkan kode yang berhasil dijalankan kepada guru.</div></div>
+</section>
+</main>
+<footer>Media pembelajaran interaktif • Informatika Kelas X SMK • Dasar Pemrograman Python untuk KA</footer>
+<script>
+function go(id){document.querySelectorAll('.panel').forEach(p=>p.classList.toggle('active',p.id===id));document.querySelectorAll('nav button').forEach(b=>b.classList.toggle('active',b.dataset.tab===id));window.scrollTo({top:0,behavior:'smooth'})}
+document.querySelectorAll('nav button').forEach(b=>b.addEventListener('click',()=>go(b.dataset.tab)));
+function values(){let nama=document.getElementById('nama').value.trim()||'Siswa';let umur=Number(document.getElementById('umur').value);if(!Number.isFinite(umur)||umur<0||umur>120){alert('Masukkan umur antara 0 sampai 120.');return null}return {nama,umur}}
+function runVars(){let v=values();if(!v)return;document.getElementById('outVars').textContent=`Halo, ${v.nama} umur kamu ${v.umur} tahun`}
+function runIf(){let v=values();if(!v)return;document.getElementById('outIf').textContent=v.umur>=18?'Kamu sudah dewasa.':'Kamu belum dewasa.'}
+function runFn(){let v=values();if(!v)return;document.getElementById('outFn').textContent=`Selamat belajar Python, ${v.nama}!`}
+const answers={q1:'b',q2:'a',q3:'c',q4:'b'};
+const explanations={q1:'Benar: variabel menyimpan data atau nilai.',q2:'Benar: if–else memilih tindakan berdasarkan kondisi.',q3:'Benar: def digunakan untuk mendefinisikan fungsi.',q4:'Benar: 16 tidak memenuhi kondisi umur >= 18, jadi cabang else dijalankan.'};
+function checkQuiz(){let score=0,done=0;for(let i=1;i<=4;i++){let chosen=document.querySelector(`input[name=q${i}]:checked`);let f=document.getElementById('f'+i);f.className='feedback';if(!chosen){f.textContent='Pilih jawaban terlebih dahulu.';f.classList.add('bad');continue}done++;if(chosen.value===answers['q'+i]){score++;f.textContent=explanations['q'+i];f.classList.add('good')}else{f.textContent='Belum tepat. '+explanations['q'+i];f.classList.add('bad')}}document.getElementById('score').textContent=`Skor: ${score}/4 (${Math.round(score/4*100)}%) • Dijawab: ${done}/4`;document.getElementById('progressBar').style.width=(score/4*100)+'%'}
+function resetQuiz(){setTimeout(()=>{for(let i=1;i<=4;i++){let f=document.getElementById('f'+i);f.textContent='';f.className='feedback'}document.getElementById('score').textContent='Skor: belum diperiksa';document.getElementById('progressBar').style.width='0%'},0)}
+function reflectionText(){return ['1. Mengapa Python banyak digunakan dalam AI?\\n'+document.getElementById('r1').value,'2. Perbedaan variabel dan fungsi\\n'+document.getElementById('r2').value,'3. Peran struktur kontrol\\n'+document.getElementById('r3').value,'4. Contoh sesuai jurusan\\n'+document.getElementById('r4').value].join('\\n\\n')}
+function saveReflection(){let t=reflectionText();document.getElementById('reflectionStatus').textContent=t.replace(/\\s/g,'').length>0?'Ringkasan siap disalin atau disimpan.':'Silakan isi jawaban refleksi terlebih dahulu.'}
+function copyReflection(){let t=reflectionText();if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(()=>document.getElementById('reflectionStatus').textContent='Jawaban refleksi berhasil disalin.').catch(()=>fallbackCopy(t))}else fallbackCopy(t)}
+function fallbackCopy(t){let a=document.createElement('textarea');a.value=t;document.body.appendChild(a);a.select();try{document.execCommand('copy');document.getElementById('reflectionStatus').textContent='Jawaban refleksi disalin.'}catch(e){document.getElementById('reflectionStatus').textContent='Salin teks refleksi secara manual.'}a.remove()}
+</script>
+</body></html>
